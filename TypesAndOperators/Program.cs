@@ -7,6 +7,9 @@ namespace TypesAndOperators
         static void Main(string[] args)
         {
             
+            Console.WriteLine("It's a nice day!");
+            
+            
         }
     }
 }
