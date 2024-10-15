@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMS_AQA", "TMS_AQA\TMS_AQA.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basic", "Basic\Basic.csproj", "{F8904D38-2196-4A25-B6AE-231629856A74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypesAndOperators", "TypesAndOperators\TypesAndOperators.csproj", "{44FFCF13-97F8-4FDB-9C8B-92C257C07629}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{F8904D38-2196-4A25-B6AE-231629856A74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8904D38-2196-4A25-B6AE-231629856A74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8904D38-2196-4A25-B6AE-231629856A74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44FFCF13-97F8-4FDB-9C8B-92C257C07629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44FFCF13-97F8-4FDB-9C8B-92C257C07629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44FFCF13-97F8-4FDB-9C8B-92C257C07629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44FFCF13-97F8-4FDB-9C8B-92C257C07629}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
