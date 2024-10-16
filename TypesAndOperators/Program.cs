@@ -77,4 +77,28 @@ namespace TypesAndOperators
             }
         }
     }
+    
+    
+    //============== Тернарная операция ============================
+    int x = 3;
+    int y = 2;
+    int z;
+
+    if (x < y)
+    {
+        z = x + y;
+    }
+    else
+    {
+        z = x - y;
+    }
+    
+    // КОД ВЫШЕ МОЖНО УПРОСТИТЬ С ПОМОЩЬЮ ТЕРНАРНОЙ ОПЕРАЦИИ:
+    
+    int x=3;
+    int y=2;
+    int z = x < y ? (x+y) : (x-y);
+    Console.WriteLine(z)  // 1
+
 }
+
