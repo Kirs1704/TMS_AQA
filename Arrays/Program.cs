@@ -8,6 +8,7 @@ namespace Arrays
         {
             //================ объявление массивов ==============================
 
+            /*
             int[] array1 = { 1, 2, 3, 4, 6 };
             int[] array2 = new int[4];
 
@@ -19,7 +20,6 @@ namespace Arrays
             Console.WriteLine("Length: " + array1.Length);                                   // количество всех элементов
             Console.WriteLine("Rank: " + array1.Rank);                                       // ранк массива
             Console.WriteLine("GetLength(0): " + array1.GetLength(0));               // количество строк (для многомерного массива)
-            Console.WriteLine("GetUpperBound(0): " + array1.GetUpperBound(0));       // Верхний индекс строк (для многомерного массива)
             
             //обращение к элементу массива
             Console.WriteLine(array1[3]); //выведет элемент массива с индексом "3". То есть число 4 в массиве array1
@@ -45,8 +45,71 @@ namespace Arrays
                 Console.Write($"{array1[i]} ");
             }
             
+            //цикл foreach
+            foreach (int item in array1)
+            {
+                Console.Write($"{item} ");
+            }
+
+            //оператор break
+            for (int i = 0; i < 9; i++)
+            {
+                if (i == 5)
+                    break;
+                Console.WriteLine(i);
+            }
+            
+            //оператор continue
+            
+            for (int i = 0; i < 9; i++)
+            {
+                if (i == 5)
+                    continue;
+                Console.WriteLine(i);
+            }
+            
+            //циклы do...while
+            int b = 5;
+            do
+            {
+                Console.WriteLine(b);
+                b--;
+            } while (b>0);
+            */
+            //======================= Двумерный массив ===================================
+
+            int[,] numbers = new int[4, 5];
+            Console.WriteLine("Length: " + numbers.Length);                                   // количество всех элементов
+            Console.WriteLine("Rank: " + numbers.Rank);                                       // ранк массива
+            Console.WriteLine("GetLength(0): " + numbers.GetLength(0));               // количество элементов в первой строке
+            Console.WriteLine("GetUpperBound(0): " + numbers.GetUpperBound(0));       // Верхний индекс строк (для многомерного массива)                                
+            Console.WriteLine("GetLength(1): " + numbers.GetLength(1));               // количество элементов во второй строке
+            Console.WriteLine("GetUpperBound(1): " + numbers.GetUpperBound(1));       // Верхний индекс столбцов(для многомерного массива)
             
             
+            //задать значение в двумерном массиве
+
+            for (int i = 0; i < numbers.GetLength(0); i++)
+            {
+                for (int j = 0; j < numbers.GetLength(1); j++)
+                {
+                    numbers[i, j] = i + j;
+                }
+            }
+
+            int rows = numbers.GetLength(0);
+            int columns = numbers.Length / rows;
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    Console.Write($"{numbers[i,j]} \t");
+                }
+                Console.WriteLine();
+            }
+
+
+
         }
     }
 }
