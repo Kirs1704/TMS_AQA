@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace Arrays
+namespace Strings
 {
     static class Program
     {
         static void Main(string[] args)
         {
-            Hello
+            Console.WriteLine();
         }
     }
 }
