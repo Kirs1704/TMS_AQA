@@ -118,6 +118,7 @@ namespace Arrays
             Console.Write($"Среднее значение массива: {middleValue}");
             */
             
+            /*
             Console.WriteLine("================ Задание # 4 ===============");
             int count1 = 0;
             int count2 = 0;
@@ -155,9 +156,40 @@ namespace Arrays
                 
                 Console.WriteLine("Средние обоих массивов равны!");
             }
+            */
 
+            //======================= Инверсия массива ======================
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };/*
+            int n = numbers.Length; // длина массива
+            int k = n/2;              // середина массива
+            int tempValue;            // вспомогательный элемент для обмена значениями
+
+            Console.Write("Первоначальный массив: ");
+            foreach (int item in numbers)
+            {
+                Console.Write($"{item} ");
+            } 
             
+            Console.WriteLine();
+            
+            Console.Write("Инвертированный массив: ");
+            for (int i = 0; i < k; i++)
+            {
+                tempValue = numbers[i];    // записали во временную переменную первый элемент массива
+                numbers[i] = numbers[n - i - 1];      // записали в текущий индекс последний элемент массива
+                numbers[n - i - 1] = tempValue;     // записали в последний элемент массива значение из временной переменной
+            }
 
+            foreach (int item in numbers)
+            {
+                Console.Write($"{item} ");
+            }
+            */
+            Array.Reverse(numbers);
+            foreach (int item in numbers)
+            {
+                Console.Write($"{item} ");
+            }
         }
     }
 }
