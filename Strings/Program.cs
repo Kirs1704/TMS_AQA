@@ -7,7 +7,7 @@ namespace Strings
     {
         static void Main(string[] args)
         {
-            string oldPath = "C:\\Program Files\\tmp.txt";
+            /*string oldPath = "C:\\Program Files\\tmp.txt";
             string newPath = @"C:\Program Files\tmp.txt";
             
             //============ варианты создания строки ==============
@@ -57,8 +57,70 @@ namespace Strings
                 string s8 = "a doctor";
                 string s9 = "away";
                 string[] values = new string[] { s5, s6, s7, s8, s9 };
-                string s10 = string.Join(" ", values); // apple a day keeps a doctor away
+                string s10 = string.Join(" ", values); // apple a day keeps a doctor away*/
+                
+                /*
+                //================== Метод CompareTo ===============================
+                string s11 = "hello";
+                string[] compare_values = new string[] { "hello", "nice", "day" };
+                foreach (string item in compare_values)
+                {
+                    Console.WriteLine($"Результат сравнения: {s11.CompareTo(item)}");
+                }
+                //=================== Поиск в строке =============================
+                string target_text = "Have a nice day!";
+                
+                //================== метод IndexOf and IndexOfAny
+                Console.WriteLine(target_text.IndexOf('v')); // с учетом регистра
+                Console.WriteLine(target_text.IndexOf('V', StringComparison.OrdinalIgnoreCase)); //без учета регистра
+                Console.WriteLine(target_text.IndexOf('a', 3)); //с указанием начала поиска
 
+                char[] chars1 = { 't', 'v', 'j' };
+                Console.WriteLine(target_text.IndexOfAny(chars1)); //этот метод работает с массивами
+                
+                
+                //============ метод StartsWith
+                
+                var files = new string[]
+                {
+                    "myapp.exe",
+                    "forest.jpg",
+                    "main.exe"
+                };
+
+                foreach (string file in files)
+                {
+                    Console.WriteLine($"Начинается ли файл {file} с маленькой буквы m(с учетом регистра): {file.StartsWith('m')}");
+                    Console.WriteLine($"Начинается ли файл {file} с большой буквы M (с учетом регистра): {file.StartsWith('M')}");
+                    Console.WriteLine($"Начинается ли файл {file} с 'My' (без учета регистра): {file.StartsWith("My", StringComparison.OrdinalIgnoreCase)}");
+                }
+                
+                //============ метод EndsWith
+                
+                foreach (string file in files)
+                {
+                    Console.WriteLine($"Заканчивается ли файл {file} на '.jpg' (с учетом регистра): {file.EndsWith(".jpg")}");
+                    Console.WriteLine($"Заканчивается ли файл {file} на '.JpG' (с учетом регистра): {file.EndsWith(".JpG")}");
+                    Console.WriteLine($"Заканчивается ли файл {file} на 'exe' (без учета регистра): {file.EndsWith(".exe", StringComparison.OrdinalIgnoreCase)}");
+                }*/
+                
+                //============= разделение строк (Split)
+
+                string txt9 = "Such:a:nice:day!";
+                string txt10 = "10: 99: :: 55";
+
+                string[] arrayFrom_txt9 = txt9.Split(":");
+                foreach (string ch in arrayFrom_txt9)
+                {
+                    Console.Write($"'{ch}' ");
+                }           
+                Console.WriteLine();
+
+                string[] arrayFrom_txt10 = txt10.Split(":", StringSplitOptions.TrimEntries);
+                foreach (string ch in arrayFrom_txt10)
+                {
+                    Console.Write($"'{ch}' ");
+                }
         }
     }
 }
