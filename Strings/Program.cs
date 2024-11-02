@@ -104,6 +104,7 @@ namespace Strings
                     Console.WriteLine($"Заканчивается ли файл {file} на 'exe' (без учета регистра): {file.EndsWith(".exe", StringComparison.OrdinalIgnoreCase)}");
                 }*/
                 
+                /*
                 //============= разделение строк (Split)
 
                 string txt9 = "Such:a:nice:day!";
@@ -121,6 +122,35 @@ namespace Strings
                 {
                     Console.Write($"'{ch}' ");
                 }
+                */
+                
+                //====================== обрезка строк (Trim)
+                
+                string original_txt = " Hello, World! ";
+                Console.WriteLine($"Первоначальный вид: '{original_txt}'");
+                original_txt = original_txt.Trim();
+                Console.WriteLine($"Преобразованный вид: '{original_txt}'");
+                
+                Console.WriteLine();
+
+                string original_txt_2 = " *Hello, World!* ";
+                Console.WriteLine($"Первоначальный вид: '{original_txt_2}'");
+                char[] chars_to_remove = { '*', ' ' };
+                original_txt_2 = original_txt_2.Trim(chars_to_remove);
+                Console.WriteLine($"Преобразованный вид: '{original_txt_2}'");
+                
+                Console.WriteLine();
+                //======= TrimStart (используется для удаления символов только в начале)
+                string original_txt_3 = " Hello, World! ";
+                Console.WriteLine($"Первоначальный вид: '{original_txt_3}'");
+                original_txt_3 = original_txt_3.TrimStart();
+                Console.WriteLine($"Преобразованный вид: '{original_txt_3}'");
+                
+                //======= TrimEnd (используется для удаления символов только в конце)
+                
+                //======= Извлечение определенной части строки (SubString)
+                //------ Пример № 1. Извлечение подстроки, начиная с определенной позиции
+                
         }
     }
 }
