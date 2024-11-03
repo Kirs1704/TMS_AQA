@@ -186,6 +186,28 @@ namespace Strings
                 //------------------ ПРИМЕР № 3. ВСТАВКА В КОНЕЦ СТРОКИ
                 string insert_txt2 = txt11.Insert(txt11.Length, " Have a nice day!");
                 Console.WriteLine(insert_txt2);
+                
+                
+            //================================ УДАЛЕНИЕ (REMOVE) ==================================
+
+            string example = "Hello, World!";
+            string remove_example = example.Remove(7); //начиная с индекса 7
+            Console.WriteLine(remove_example);
+            
+            string example1 = "Hello, World!";
+            string remove_example1 = example1.Remove(7, 3); //начиная с индекса 7 будет удалено 3 символа
+            Console.WriteLine(remove_example1);
+            
+            string example2 = "Hello, World!";
+            string remove_example2 = example2.Remove(example2.Length-3); //удалит 3 символа с конца
+            Console.WriteLine(remove_example2);
+            
+            
+            
+            //================================= ЗАМЕНА (REPLACE) ===========================================
+            string example3 = "Hello, World! Hello, Everybody!";
+            string replace_example = example3.Replace("Hello", "Hi"); //поменяет первое значение во всей строке на второе
+            Console.WriteLine(replace_example);
         }
     }
 }
