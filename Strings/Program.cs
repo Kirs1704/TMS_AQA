@@ -149,8 +149,43 @@ namespace Strings
                 //======= TrimEnd (используется для удаления символов только в конце)
                 
                 //======= Извлечение определенной части строки (SubString)
-                //------ Пример № 1. Извлечение подстроки, начиная с определенной позиции
+                string txt99 = "Hello World!";
                 
+                //------ Пример № 1. Извлечение подстроки, начиная с определенной позиции
+                string substr1 = txt99.Substring(6); //вырежет часть строки начиная с индекса 6
+                Console.WriteLine(substr1);
+                
+                //------- Пример № 2. Извлечение из определенного диапазона
+                string substr2 = txt99.Substring(6, 5); //первый параметр - стартовый индекс, второй - количество символов для вырезки
+                Console.WriteLine(substr2);
+                
+                //-------- Пример № 3. Извлечение подстроки через переменные
+                int startIndex = 6;
+                int length = 5;
+                string substr3 = txt99.Substring(startIndex, length);
+                Console.WriteLine($"Substring ({startIndex}, {length}): {substr3}");
+                
+                // ЛИБО
+                int startIndex1 = 6;
+                string word = "World";
+                string substr4 = txt99.Substring(startIndex1, word.Length);
+                Console.WriteLine($"Substring ({startIndex1}, {word.Length}): {substr4}");
+                
+                
+                //================================= ВСТАВКА (insert) =========================
+                string txt11 = "Hello World!";
+                
+                //------------------ ПРИМЕР № 1. ВСТАВКА В СЕРЕДИНУ СТРОКИ
+                string insert_txt = txt11.Insert(6, "beautiful ");
+                Console.WriteLine(insert_txt);
+
+                //------------------ ПРИМЕР № 2. ВСТАВКА В НАЧАЛО СТРОКИ
+                string insert_txt1 = txt11.Insert(0, "Greetings: ");
+                Console.WriteLine(insert_txt1);
+                
+                //------------------ ПРИМЕР № 3. ВСТАВКА В КОНЕЦ СТРОКИ
+                string insert_txt2 = txt11.Insert(txt11.Length, " Have a nice day!");
+                Console.WriteLine(insert_txt2);
         }
     }
 }
