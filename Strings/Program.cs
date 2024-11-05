@@ -208,6 +208,49 @@ namespace Strings
             string example3 = "Hello, World! Hello, Everybody!";
             string replace_example = example3.Replace("Hello", "Hi"); //поменяет первое значение во всей строке на второе
             Console.WriteLine(replace_example);
+            
+            //================================ СМЕНА РЕГИСТРА ===============================================
+            string hello = "Hello, World!";
+            Console.WriteLine(hello.ToLower()); // hello, world!
+            Console.WriteLine(hello.ToUpper()); // HELLO, WORLD!
+            
+            //===================== ПРОВЕРКА НА СОДЕРЖАНИЕ ЧЕГО-ТО В СТРОКЕ (CONTAINS)=======================
+            string hello1 = "Hello, World!";
+            
+            //----Проверка наличия подстроки
+            bool sub_hello = hello1.Contains("World");
+            Console.WriteLine(sub_hello);                           // True
+            
+            //----Проверка наличия подстроки (регистрозавимая)
+            bool sub_hello1 = hello1.Contains("WORLD", StringComparison.OrdinalIgnoreCase);
+            Console.WriteLine(sub_hello1);                           // True
+            
+            //----Проверка наличия символа
+            bool sub_hello2 = hello1.Contains(",");
+            Console.WriteLine(sub_hello2);                           // True
+            
+            
+            // =========================== ФОРМАТИРОВАНИЕ СТРОК (string.Format) ========================
+
+            string name = "Kirill";
+            int age = 33;
+            Console.WriteLine("Hello! My name is {0}, i'm {1} years!", name, age);
+
+
+            string greetings = string.Format("Hello, {0}! Today is {1}!", "Kirs", DateTime.Now.DayOfWeek);
+            Console.WriteLine(greetings);
+            
+            //-------Форматирование чисел
+            // C - форматирование валюты
+            string formattedString1 = string.Format("The price is: {0:C}", 123.45); // Вывод: The price is: 123.45 ($, руб. - в зависимости от локали) 
+            Console.WriteLine(formattedString1);
+            
+            //------настраиваемый формат
+            long number = 19876543210;
+            string result = string.Format("{0:+# (###) ###-##-##}", number); // Вывод: +1 (987) 654-32-10
+
+            Console.WriteLine(result);
+
         }
     }
 }
