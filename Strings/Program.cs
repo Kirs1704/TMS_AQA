@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices.JavaScript;
+using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Strings
 {
@@ -250,6 +252,29 @@ namespace Strings
             string result = string.Format("{0:+# (###) ###-##-##}", number); // Вывод: +1 (987) 654-32-10
 
             Console.WriteLine(result);
+            
+            // ================================ StringBuilder ===========================================
+            //-------------Constructor
+            StringBuilder sb = new StringBuilder("Hello, "); // инициализировали
+            sb.Append("world!");                             // добавили слово
+            Console.WriteLine(sb);
+            
+            
+            Console.WriteLine();
+            
+            //------------- AppendLine
+            // добавляет необходимое и переводит каретку на новую строку
+            StringBuilder sb1 = new StringBuilder("Hello, ");
+            sb1.AppendLine("world!");
+            sb1.AppendLine("How are you?");
+            Console.WriteLine(sb1);
+            
+            //==================== РЕГУЛЯРНЫЕ ВЫРАЖЕНИЯ (Regex) ==============================
+            
+            //------------------ Соответствие строки регулярному выражению
+            string input = "Hello, 123!";
+            string pattern = @"(\d+)"; //Шаблон: одна или более цифр
+            
 
         }
     }
