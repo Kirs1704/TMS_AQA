@@ -275,6 +275,81 @@ namespace Strings
             string input = "Hello, 123!";
             string pattern = @"(\d+)"; //Шаблон: одна или более цифр
             
+            
+            //==================================== HOMEWORK ========================================
+            
+            //------------------ Задание № 1
+            //Заменить в строке все вхождения 'test' на 'testing'. Удалить из текста все символы, являющиеся цифрами
+            
+            Console.WriteLine("========= Задание № 1 ===========");
+       
+            string origin_txt = "Hello everybody, hello world! Hello sun, hello new day! Today is 22 and 33 and 44 cool facts!";
+            Console.WriteLine($"Первоначальный вид: {origin_txt}");
+            string replace_txt = origin_txt.Replace("Hello", "Hi", StringComparison.OrdinalIgnoreCase);
+            Console.WriteLine($"Измененный вид: {replace_txt}");
+            string pattern1 = @"(\d+)";
+            string final_txt = Regex.Replace(replace_txt, pattern1, "");
+            Console.WriteLine($"Измененный вид без чисел: {final_txt}");
+            
+            Console.WriteLine();
+            //------------------ Задание № 2
+            
+            /*
+            Используя метод вывода значения в консоль, выполните конкатенацию слов и выведите на экран следующую фразу:
+            Welcome to the TMS lessons.
+            Каждое слово должно быть записано отдельно и взято в кавычки, например "Welcome". Не забывайте о пробелах после каждого слова
+            */
+            
+            Console.WriteLine("========= Задание № 2 ===========");
+            string start_txt = "Welcome to the TMS lessons";
+            Console.WriteLine($"Первоначальный вид: {start_txt}");
+
+            string[] final_txt1 = start_txt.Split(" ");
+            Console.Write("Модифицированный вид: ");
+            foreach (string words in final_txt1)
+            {
+                Console.Write($"'{words}' ");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+            //------------------ Задание № 3
+            Console.WriteLine("========= Задание № 3 ===========");
+            
+            /*
+            Дана строка: “teamwithsomeofexcersicesabcwanttomakeitbetter.”
+            Необходимо найти в данной строке "abc", записав всё что до этих символов в первую переменную, 
+            а также всё, что после них во вторую.
+            Результат вывести в консоль.
+            */
+
+            string start_txt2 = "teamwithsomeofexcersicesabcwanttomakeitbetter.";
+            Console.WriteLine($"Стартовое сообщение: {start_txt2}");
+            string before_abc = start_txt2.Substring(0,24);
+            string after_abc = start_txt2.Substring(27);
+            Console.WriteLine($"До 'abc': {before_abc}");
+            Console.WriteLine($"После 'abc': {after_abc}");
+            
+            Console.WriteLine();
+            //------------------ Задание № 4
+            Console.WriteLine("========= Задание № 4 ===========");
+            
+            /*
+            Дана строка: “Плохой день.”
+            Необходимо с помощью метода substring удалить слово "плохой". 
+            После чего необходимо используя команду insert создать строку со значением: Хороший день!!!!!!!!!.
+            Заменить последний "!" на "?"
+            */
+            string start_txt3 = "Плохой день.";
+            Console.WriteLine($"Стартовая строка: {start_txt3}");
+            string delete_badDay = start_txt3.Substring(7);
+            string good_day = delete_badDay.Insert(0, "Хороший ");
+            good_day += "!!!!!!!!!";
+            good_day = good_day.Remove(good_day.Length - 1, 1).Insert(good_day.Length - 1, "?");
+            Console.WriteLine($"Преобразованная строка: {good_day}");
+
+
+
 
         }
     }
