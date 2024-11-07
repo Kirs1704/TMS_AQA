@@ -348,6 +348,23 @@ namespace Strings
             good_day = good_day.Remove(good_day.Length - 1, 1).Insert(good_day.Length - 1, "?");
             Console.WriteLine($"Преобразованная строка: {good_day}");
 
+            Console.WriteLine();
+            //------------------ Задание № 5
+            Console.WriteLine("========= Задание № 5 ===========");
+            string start_txt4 = "1234-fff-3333-bbb-1a1b";
+            string pattern2 = @"(\d{4})";
+            MatchCollection matches = Regex.Matches(start_txt4, pattern2);
+            Console.Write("Первые два блока с цифрами: ");
+            foreach (Match item in matches)
+            {
+                Console.Write($"{item} ");
+            }
+            Console.WriteLine();
+
+            string pattern3 = @"[A-Za-z]{3}";
+            string result3 = Regex.Replace(start_txt4, pattern3, "***");
+            Console.WriteLine($"Замена букв на '*': {result3}");
+            
 
 
 
