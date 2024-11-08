@@ -82,6 +82,58 @@ namespace Strings
             
             Console.WriteLine("Sum1: " + sum1);
             Console.WriteLine("Sum2: " + sum2);
+            
+            //========================= ПЕРЕДАЧА ПАРАМЕТРОВ ==============================
+            
+            //-------------------- ПО ЗНАЧЕНИЮ
+            void SimpleAdd(int x, int y) //по умолчанию аргументы передаются по значению
+            {
+                int ans = x + y;
+            }
+            
+            //-------------------- ПО ССЫЛКЕ
+            //----- 1 вариант - Out (значения выходных параметров должны быть установлены внутри вызываемого метода)
+            void OutAdd(int x, int y, out int ans)
+            {
+                ans = x + y;
+            }
+
+            int ans;
+            OutAdd(90,90, out ans);
+            Console.WriteLine("OutAdd: 90 + 90 = {0}", ans);
+            
+            // практическое применение в тестировании - возврат данных
+            void manyValues(out int a, out string b, out bool c)
+            {
+                a = 9;
+                b = "Hello";
+                c = true;
+            }
+            
+            
+            //----- 2 вариант - Ref
+            void ModifyValue(ref int value)
+            {
+                value = value * 2; 
+            }
+
+            int MainValue = 5;                       //практически то же самое, что out, но тут переменная должна быть проинициализирована
+            Console.WriteLine($"Первоначальное значение: {MainValue}");
+            ModifyValue(ref MainValue);
+            Console.WriteLine($"Значение после применения метода: {MainValue}");
+            
+            //=========================== ВОЗВРАТ НЕСКОЛЬКИХ ЗНАЧЕНИЙ ================================
+            //----- КОРТЕЖ
+            (string, int) GetPersonInfo()
+            {
+                return ("Kirs", 33);
+            }
+
+            var person = GetPersonInfo();
+            Console.WriteLine($"Name: {person.Item1}, Age: {person.Item2}");
+
+
+
 
         }
     }
