@@ -11,6 +11,7 @@ namespace Strings
         {
             
 
+            /*
             int[] array = { 1, 8, 14, -4, 0, 7 };
             PrintArray();
             
@@ -86,6 +87,7 @@ namespace Strings
             //========================= ПЕРЕДАЧА ПАРАМЕТРОВ ==============================
             
             //-------------------- ПО ЗНАЧЕНИЮ
+            
             void SimpleAdd(int x, int y) //по умолчанию аргументы передаются по значению
             {
                 int ans = x + y;
@@ -93,6 +95,7 @@ namespace Strings
             
             //-------------------- ПО ССЫЛКЕ
             //----- 1 вариант - Out (значения выходных параметров должны быть установлены внутри вызываемого метода)
+            
             void OutAdd(int x, int y, out int ans)
             {
                 ans = x + y;
@@ -112,6 +115,7 @@ namespace Strings
             
             
             //----- 2 вариант - Ref
+            
             void ModifyValue(ref int value)
             {
                 value = value * 2; 
@@ -124,6 +128,7 @@ namespace Strings
             
             //=========================== ВОЗВРАТ НЕСКОЛЬКИХ ЗНАЧЕНИЙ ================================
             //----- КОРТЕЖ
+            
             (string, int) GetPersonInfo()
             {
                 return ("Kirs", 33);
@@ -131,6 +136,29 @@ namespace Strings
 
             var person = GetPersonInfo();
             Console.WriteLine($"Name: {person.Item1}, Age: {person.Item2}");
+            
+            // ======================== СОКРАЩЕННАЯ ФОРМА МЕТОДА
+
+            int shortAdd(int x, int y) => x + y; // эта форма аналогична форме ниже
+            
+            //---------------------------------------------------------------------
+
+            int shortAdd1(int x, int y)
+            {
+                return x + y;
+            }
+            */
+            
+            
+            //====================== РЕКУРСИВНАЯ ФУНКЦИЯ
+
+            int Factorial(int n)
+            {
+                if (n == 1) return 1;
+                return n * Factorial(n - 1);
+            }
+
+            int factorial4 = Factorial(4); // 24
 
 
 
