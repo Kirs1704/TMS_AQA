@@ -2,6 +2,8 @@
 using System.Runtime.InteropServices.JavaScript;
 using System.Text;
 using System.Text.RegularExpressions;
+using Methods;
+using Methods.Models;
 
 namespace Strings
 {
@@ -147,7 +149,6 @@ namespace Strings
             {
                 return x + y;
             }
-            */
             
             
             //====================== РЕКУРСИВНАЯ ФУНКЦИЯ
@@ -159,9 +160,35 @@ namespace Strings
             }
 
             int factorial4 = Factorial(4); // 24
+            */
+            
+            
+            
+            // ============================ КЛАССЫ ============================================
+            
+            //----------Структура класса-------
 
+            EmptyClass emptyClass = new EmptyClass();
 
+            Person person = new Person();
+            person.Print();
+            person.name = "Kirs";   // переназначили значение переменной "name" из класса Person
+            person.age = 33;        // переназначили значение переменной "age" из класса Person
+            person.Print();         // вывели на консоль с новыми значениями
+            
+            
+            
+            //----------Создание конструкторов-------
 
+            PersonWithConstructor personWithConstructor = new PersonWithConstructor();
+            personWithConstructor.Print();
+
+            ConstructorCustom constructorCustom = new ConstructorCustom(10);
+            Console.WriteLine(constructorCustom.GetHashCode());
+            ConstructorCustom constructorCustom1 = new ConstructorCustom("Test");
+            Console.WriteLine(constructorCustom1.GetHashCode());
+            constructorCustom = new ConstructorCustom("text");
+            Console.WriteLine(constructorCustom.GetHashCode());
 
         }
     }
