@@ -14,4 +14,11 @@ public class ConstructorCustom
     {
         textMain = text;
     }
+    
+    public ConstructorCustom(string text, int size)
+    {
+        textMain = text;
+        sizeMain = size;
+    }
+
 }

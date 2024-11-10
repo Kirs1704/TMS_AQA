@@ -4,7 +4,7 @@ public class PersonWithConstructor
 {
     // блок полей (переменных)
     
-    public string name = "Undefined"; // имя
+    public string name;                // имя
     public int age;                   // возраст
 
     public PersonWithConstructor()

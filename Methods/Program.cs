@@ -124,12 +124,12 @@ namespace Strings
             }
 
             int MainValue = 5;                       //практически то же самое, что out, но тут переменная должна быть проинициализирована
-            Console.WriteLine($"Первоначальное значение: {MainValue}");
+            Console.WriteLine($"Первоначальное значение: {MainValue}"); // 5
             ModifyValue(ref MainValue);
-            Console.WriteLine($"Значение после применения метода: {MainValue}");
+            Console.WriteLine($"Значение после применения метода: {MainValue}"); // 10
             
             //=========================== ВОЗВРАТ НЕСКОЛЬКИХ ЗНАЧЕНИЙ ================================
-            //----- КОРТЕЖ
+            //----- КОРТЕЖ (Tulpe)
             
             (string, int) GetPersonInfo()
             {
@@ -172,8 +172,8 @@ namespace Strings
 
             Person person = new Person();
             person.Print();
-            person.name = "Kirs";   // переназначили значение переменной "name" из класса Person
-            person.age = 33;        // переназначили значение переменной "age" из класса Person
+            person.name = "Kirs";   // переназначили значение переменной "name" у объекта person класса Person 
+            person.age = 33;        // переназначили значение переменной "age" у объекта person класса Person 
             person.Print();         // вывели на консоль с новыми значениями
             
             
@@ -183,12 +183,24 @@ namespace Strings
             PersonWithConstructor personWithConstructor = new PersonWithConstructor();
             personWithConstructor.Print();
 
-            ConstructorCustom constructorCustom = new ConstructorCustom(10);
-            Console.WriteLine(constructorCustom.GetHashCode());
-            ConstructorCustom constructorCustom1 = new ConstructorCustom("Test");
-            Console.WriteLine(constructorCustom1.GetHashCode());
-            constructorCustom = new ConstructorCustom("text");
-            Console.WriteLine(constructorCustom.GetHashCode());
+            ConstructorCustom constructorCustom = new ConstructorCustom(10);       // используем конструктор с параметром int
+            Console.WriteLine(constructorCustom.GetHashCode());                       // проверяем hush-код
+            
+            ConstructorCustom constructorCustom1 = new ConstructorCustom("Test");  // используем конструктор с параметром string
+            Console.WriteLine(constructorCustom1.GetHashCode());                      // проверяем hush-код
+            
+            constructorCustom = new ConstructorCustom("text");                    // переназначем объект с int на объект со string
+            Console.WriteLine(constructorCustom.GetHashCode());                      // проверяем hush-код
+
+
+            FullConstructor fullConstructor = new FullConstructor();                 // тут в скобках можно передать параметры (будут выведены методом ниже)
+            fullConstructor.Print();
+
+
+            PersonChain personChain = new PersonChain();
+            personChain.Print();
+
+
 
         }
     }
