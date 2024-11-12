@@ -4,7 +4,15 @@ public class CreditCard
 {
     // блок полей
     public long accNumber;
-    public int balance = 0;
+    public int balance;
+    
+    // блок конструктора
+
+    public CreditCard(long accNumber, int balance)
+    {
+        this.accNumber = accNumber;
+        this.balance = balance;
+    }
 
 
     // метод для пополнения баланса
@@ -15,8 +23,6 @@ public class CreditCard
             balance += item;
             Console.WriteLine($"Вы пополнили баланс на {item} рублей");
         }
-
-        Console.WriteLine($"Ваш текущий баланс после пополнения составляет: {balance} рублей");
     }
     
     // метод для снятия суммы с карты
@@ -34,7 +40,7 @@ public class CreditCard
             {
                 Console.WriteLine($"Увы, у вас на балансе недостаточно средств");
             }
-            Console.WriteLine($"Ваш текущий баланс {balance} рублей");
+            
         }
         
         
@@ -43,6 +49,6 @@ public class CreditCard
     // метод для проверки баланса
     public void checkBalance()
     {
-        Console.WriteLine($"Ваш текущий баланс {this.balance} рублей");
+        Console.WriteLine($"Ваш текущий баланс на карте '{accNumber}' - {this.balance} рублей");
     }
 }
