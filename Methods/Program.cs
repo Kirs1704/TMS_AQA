@@ -199,6 +199,82 @@ namespace Strings
 
             PersonChain personChain = new PersonChain();
             personChain.Print();
+            
+            
+            //============================= Практика =======================================================
+            //------------------ Задача № 1------------------------
+            
+            /*** Создать класс "Студенты" с полями: имя, группа, оценка за диплом
+             *  В цикле создать массив из 14 студентов
+             */
+            Students[] students = new Students[14];
+
+            for (int i = 0; i < 14; i++)
+            {
+                students[i] = new Students();
+                students[i].name = "Alex" + i;
+                students[i].group = new Random().Next(1,3);
+                students[i].diplomMark = new Random().Next(1,6);
+            }
+            Console.WriteLine($"Длина массива 'Students' составляет: {students.Length}");
+
+            foreach (var student in students)
+            {
+                Console.WriteLine($"Имя студента: {student.name}, Группа: {student.group}, Оценка: {student.diplomMark}");
+                Console.WriteLine();
+            }
+            
+            //------------------ Задача № 2------------------------
+            /*** Создайте метод класса студент, который будет выводить всю информацию о студенте.
+             * Выведете информацию обо всех отличниках (4-5) баллов за диплом) в консоль
+             */
+            foreach (Students student in students)
+            {
+                if (student.diplomMark == 4 || student.diplomMark == 5)
+                {
+                    student.Print();
+                }
+
+            }
+            
+            //------------------ Задача № 3------------------------
+            /*** Создайте конструктор класса "Студент" и используйте его в цикле.
+             * В конструкторе задайте всем студентам одинаковую группу
+             * Установите каждому студенту различную оценку по 10 бальной шкале с помощью класса Random.
+             */
+            Console.WriteLine("=======================================================");
+
+            Students[] students1 = new Students[14];
+            for(int i =0; i<14; i++)
+            {
+                students1[i] = new Students("Alex" + i);
+            }
+                foreach (var student in students1)
+                {
+                    student.Print();
+                }
+                
+                //------------------ Задача № 4------------------------
+            /*** Создать кота с полями:
+             * имя
+             * возраст
+             * насыщение кота (количество корма)
+             * Создайте метод кормежка. Входным параметром укажите количество корма. Возвращаемое значение:
+             * true - кот наелся
+             * false - кот не наелся
+             */
+            Cat cat = new Cat();
+            cat.name = "Barsik";
+            cat.age = 2;
+            cat.maxFoodCount = 3;
+            
+            Console.WriteLine($"Наелся? - {cat.Eaten(2)}");
+            Console.WriteLine($"Наелся? - {cat.Eaten(3)}");
+
+
+
+
+
 
 
 
