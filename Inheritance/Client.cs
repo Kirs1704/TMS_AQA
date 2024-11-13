@@ -1,4 +1,4 @@
-namespace Abstraction;
+namespace Inheritance;
 
 public class Client
 {
@@ -9,4 +9,9 @@ public class Client
     public void Actiavte(){}
     public void Pause(){}
     public void Deactivate(){}
+
+    public Client(int id)
+    {
+        Id = id;
+    }
 }
