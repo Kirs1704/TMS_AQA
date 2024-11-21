@@ -10,6 +10,9 @@ namespace Strings
             State state = new State();
             Console.WriteLine(state.publicVar);
 
+            ChildState childState = new ChildState();
+           
+
 
         }
     }

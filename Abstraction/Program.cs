@@ -1,6 +1,8 @@
 ﻿using System;
 using Abstraction;
 
+
+
 namespace Strings
 {
     static class Program
@@ -24,6 +26,7 @@ namespace Strings
             
             Console.Out.WriteLine(client2.Id);
             Console.Out.WriteLine(client2.PhoneNumber);
+
 
         }
     }
