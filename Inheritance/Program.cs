@@ -4,7 +4,7 @@ using Inheritance;
 
 namespace Strings
 {
-    static class Program
+    static class Inheritance
     {
         static void Main(string[] args)
         {

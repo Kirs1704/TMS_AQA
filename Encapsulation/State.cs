@@ -15,7 +15,7 @@ public class State
     public string publicVar = "public";
     
     // доступна из текущего класса и производных классов
-    protected string protectedVar = "protected";
+    protected string protectedVar = "protected";    
 
     // однако, класс внутри основного класса может быть приватным
     private class StateInside

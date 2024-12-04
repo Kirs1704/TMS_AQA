@@ -11,7 +11,6 @@ namespace Strings
             Console.WriteLine(state.publicVar);
 
             ChildState childState = new ChildState();
-           
 
 
         }
