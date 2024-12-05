@@ -42,7 +42,8 @@ public class Ravnobedr
     {
         if (_isValid) // если предыдущие условия прошли успешно, тогда это значение д.б. true
         {
-            return ((FirstSide + SecondSide + BaseSide) / 2) * Radius; // для данного способа сначала находим полупериметр (это то что ниже в скобках). А потом умножаем на Radius.
+            // для данного способа сначала находим полупериметр (это то что ниже в скобках). А потом умножаем на Radius.
+            return ((FirstSide + SecondSide + BaseSide) / 2) * Radius; 
         }
         else
         {

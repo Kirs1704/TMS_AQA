@@ -33,7 +33,10 @@ namespace Task1
 
             Ravnostor ravnostor = new Ravnostor(2,2,2,4);
             Console.WriteLine($"{ravnostor.GetArea()}");
-            
+
+            TriangleKind triangleKind = new TriangleKind(10, 20, 30);
+            triangleKind.getTriangleType();
+
 
         }
     }
