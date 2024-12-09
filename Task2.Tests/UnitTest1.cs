@@ -1,5 +1,4 @@
-using Task2.Mod;
-namespace Task3.Unit.Tests;
+namespace Task2.Tests;
 
 [Parallelizable(ParallelScope.Self)]
 [TestFixture]
