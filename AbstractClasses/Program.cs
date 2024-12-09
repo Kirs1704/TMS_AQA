@@ -1,3 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using AbstractClasses;
 
-Console.WriteLine("Hello, World!");
+// создание объекта абстрактного класса как в примере ниже вызовет ошибку, т.к. нельзя создать объект абстрактного класса 
+// AbstractClassTemplate abstractClassTemplate = new AbstractClassTemplate() ---- ошибка
