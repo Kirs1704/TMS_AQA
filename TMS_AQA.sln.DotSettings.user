@@ -1,0 +1,26 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2583c972_002D5e29_002D4842_002D8c37_002D99f89f4f467b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AssignDoctor_WinthPlanId1_ReturnSurgeon #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::107EBAAB-7462-4240-87B5-83790CAA3AB9::net8.0::Task2.Tests.PatientTests.AssignDoctor_WinthPlanId1_ReturnSurgeon&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=683383ca_002De638_002D466a_002Da863_002D5a05c9db7c93/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="AssignDoctor_WinthPlanId1_ReturnSurgeon #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::107EBAAB-7462-4240-87B5-83790CAA3AB9::net8.0::Task2.Tests.PatientTests.AssignDoctor_WinthPlanId1_ReturnSurgeon&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=86db6a29_002Da2c0_002D472e_002Daaa9_002Dce0a255e5542/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AssignDoctor_WinthPlanId1_ReturnSurgeon" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::107EBAAB-7462-4240-87B5-83790CAA3AB9::net8.0::Task2.Tests.PatientTests.AssignDoctor_WinthPlanId1_ReturnSurgeon&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=95e87272_002D9f05_002D42cb_002D94eb_002D1362f54e2207/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AssignDoctor_WinthPlanId1_ReturnSurgeon #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::107EBAAB-7462-4240-87B5-83790CAA3AB9::net8.0::Task2.Tests.PatientTests.AssignDoctor_WinthPlanId1_ReturnSurgeon&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f52c2a32_002D32f9_002D4044_002Dacbb_002D4a9468b9f0a7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AssignDoctor_WinthPlanId1_ReturnSurgeon #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::107EBAAB-7462-4240-87B5-83790CAA3AB9::net8.0::Task2.Tests.PatientTests.AssignDoctor_WinthPlanId1_ReturnSurgeon&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

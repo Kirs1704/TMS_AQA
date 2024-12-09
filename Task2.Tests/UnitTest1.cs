@@ -1,27 +1,43 @@
-namespace Task2.Tests;
+using NUnit.Framework;
+using Task2.Models.Doctor;
+using Task2.Models.Patient; //подключаем пространство имен из программы Task2 с классом Patient (юниты будут для этого класса)
 
-[Parallelizable(ParallelScope.Self)]
-[TestFixture]
-public class Tests : PageTest
+namespace Task2.Tests;
+// определяется пространство имен текущего проекта
+
+[Parallelizable(ParallelScope.Self)] // говорит о том, что тесты в данном классе могут запускаться параллельно (экономит время)
+[TestFixture] // Т.о. говорим, что данный класс содержит тестовые методы. Nunit найдет их по этому атрибуту при запуске
+public class PatientTests //  Объявляем наш тестовый класс
 {
     [Test]
-    public async Task HomepageHasPlaywrightInTitleAndGetStartedLinkLinkingtoTheIntroPage()
+    public void
+        AssignDoctor_WinthPlanId1_ReturnSurgeon() // Объявляем юнит метод, который проверит как отрабатывает основной метод AssignDoctor
     {
-        await Page.GotoAsync("https://playwright.dev");
+        // Arrange
+        var patient = new Patient("TestName", 32, new HealPlan(1)); // создаем тестового пациента с планом лечения "1"
 
-        // Expect a title "to contain" a substring.
-        await Expect(Page).ToHaveTitleAsync(new Regex("Playwright"));
+        // Act
+        var doctor = patient.AssignDoctor(); // вызываем проверяемый юнитом метод
 
-        // create a locator
-        var getStarted = Page.Locator("text=Get Started");
+        // Assert
+        Assert.IsInstanceOf<Surgeon>(
+            doctor); // Проверяем, что возвращенный объект (doctor) является экземпляром класса Surgeon
 
-        // Expect an attribute "to be strictly equal" to the value.
-        await Expect(getStarted).ToHaveAttributeAsync("href", "/docs/intro");
 
-        // Click the get started link.
-        await getStarted.ClickAsync();
+    }
 
-        // Expects the URL to contain intro.
-        await Expect(Page).ToHaveURLAsync(new Regex(".*intro"));
+    // ==========================================  Далее то же самое, что и выше, только для PlanId - 2 ===================
+    
+    [Test]
+    public void AssignDoctor_WinthPlanId2_ReturnDentist() // Объявляем юнит метод, который проверит как отрабатывает основной метод AssignDoctor
+    {
+        // Arrange
+        var patient = new Patient("TestName1", 33, new HealPlan(2)); // создаем тестового пациента с планом лечения "2"
+
+        // Act
+        var doctor = patient.AssignDoctor(); // вызываем проверяемый юнитом метод
+
+        // Assert
+        Assert.IsInstanceOf<Dentist>(doctor); // Проверяем, что возвращенный объект (doctor) является экземпляром класса Dentist
     }
 }

@@ -18,7 +18,7 @@ public class Patient
         Plan = plan;
     }
 
-    public void AssignDoctor()
+    public Doctor AssignDoctor()
     {
         Doctor doctor;
         switch(Plan.PlanId)
@@ -33,6 +33,8 @@ public class Patient
                 doctor = new Therapist();
                 break;
         }
+
         doctor.Heal();
+        return doctor;
     }
 }

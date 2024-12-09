@@ -9,4 +9,9 @@ public class HealPlan
     {
         PlanId = planId;
     }
+
+    public HealPlan()
+    {
+        throw new NotImplementedException();
+    }
 }
