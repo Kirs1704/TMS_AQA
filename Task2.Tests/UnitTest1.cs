@@ -10,8 +10,7 @@ namespace Task2.Tests;
 public class PatientTests //  Объявляем наш тестовый класс
 {
     [Test]
-    public void
-        AssignDoctor_WinthPlanId1_ReturnSurgeon() // Объявляем юнит метод, который проверит как отрабатывает основной метод AssignDoctor
+    public void AssignDoctor_WinthPlanId1_ReturnSurgeon() // Объявляем юнит метод, который проверит как отрабатывает основной метод AssignDoctor
     {
         // Arrange
         var patient = new Patient("TestName", 32, new HealPlan(1)); // создаем тестового пациента с планом лечения "1"
