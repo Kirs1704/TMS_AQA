@@ -23,9 +23,9 @@ warrior.PrintInfo();  // использовали метод PrintInfo, опре
 
 Character[] characters = new Character[3];  // создали массив из 3 объектов (пока не определили каких именно - Warrior или Wizard)
 
-characters[0] = new Wizard();               // первым объектов в массиве сделали Wizard
-characters[1] = new Warrior();              // вторым объектов в массиве сделали Warrior
-characters[2] = new Warrior();              // третьим объектов в массиве сделали Warrior
+characters[0] = new Wizard();               // первым объектом в массиве сделали Wizard
+characters[1] = new Warrior();              // вторым объектом в массиве сделали Warrior
+characters[2] = new Warrior();              // третьим объектом в массиве сделали Warrior
 
 foreach (var character in characters)       // с помощью цикла прошлись по каждому объекту из массива
 {

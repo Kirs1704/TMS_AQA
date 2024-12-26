@@ -7,4 +7,9 @@ public class Tablet : IDysplayable
     {
         Console.WriteLine($"Tablet dysplay: {information}"); // реализация отображения на экране планшета
     }
+
+    public void DrawBorders()
+    {
+        Console.WriteLine("Tablet: Рисуем границы на планшете...");
+    }
 }
