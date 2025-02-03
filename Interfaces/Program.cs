@@ -90,8 +90,12 @@ heroAction.Move();
 
 
 // ======================= ЗАДАЧА ====================================
-ApplicationTester applicationTester = new ApplicationTester();
-applicationTester.AddTest(new IntegrationTest());
-applicationTester.RunTests();
+ApplicationTester myTest = new ApplicationTester();  // создаем объект тестера
+myTest.AddTest(new IntegrationTest());               // в этом объекте добавим тесты, вызвав метод AddTest (см. класс ApplicationTester)
+myTest.RunTests();                                  // запускаем тесты методом, который имплементирован за счет интерфейса ITestable
 
-var applicationTester2 = new ApplicationTester();
+var myTest2 = new ApplicationTester();              // можно создать объект класса ApplicationTester и таким образом (без явного указания его типа)
+
+
+UnitTest myUnitTest = new UnitTest();               // можно сделать так: создать объект определенного вида тестов (IntegrationTest, UITest или UnitTest)
+myTest.AddTest(myUnitTest);                         // далее передать этот объект как аргумент в объект созданного тестера
