@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excpetions", "Excpetions\Excpetions.csproj", "{00D89728-200D-40F8-B9E1-C0886BF868E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork_Exceptions", "HomeWork_Exceptions\HomeWork_Exceptions.csproj", "{8522FED2-65CB-4195-A312-A4756F517F3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{00D89728-200D-40F8-B9E1-C0886BF868E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00D89728-200D-40F8-B9E1-C0886BF868E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00D89728-200D-40F8-B9E1-C0886BF868E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8522FED2-65CB-4195-A312-A4756F517F3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8522FED2-65CB-4195-A312-A4756F517F3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8522FED2-65CB-4195-A312-A4756F517F3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8522FED2-65CB-4195-A312-A4756F517F3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
