@@ -1,10 +1,12 @@
 namespace Excpetions;
 
+
+// В этом классе приводятся примеры контролируемых исключений
 public class CheckedExceptions
 {
-    public void ReadFile(string filePath)
+    public void ReadFile(string filePath)                               // Метод, принимающий на вход путь к файлу
     {
-        using (StreamReader reader = new StreamReader(filePath))
+        using (StreamReader reader = new StreamReader(filePath))        // спец. класс StreamReader, объект, которого читает файл по заданному пути
         {
             Console.WriteLine(reader.ReadToEnd());
         }
