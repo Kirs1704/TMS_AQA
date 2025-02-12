@@ -58,6 +58,7 @@ public class LinkedListExample
         linkedList.Clear();
         Console.WriteLine("Результат после очистки коллекции: ");
         PrintHelper.PrintCollection(linkedList);
+        PrintHelper.PrintCollection(linkedList);
         
 
 
