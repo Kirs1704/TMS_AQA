@@ -14,11 +14,11 @@ public class Book
             string? bookName = Console.ReadLine();
             BookName = bookName;
         }
-        catch (Exception e)
+        catch (WrongBookNameException ex)
         {
             if (string.IsNullOrEmpty(BookName) || string.IsNullOrWhiteSpace(BookName))
             {
-                throw new Exception("Некорректное название книги");
+                Console.WriteLine(ex);
             }   
         }
         Console.Write("Введите автора книги: ");
