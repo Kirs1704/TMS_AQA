@@ -1,3 +1,5 @@
+using System.Collections;
+
 namespace HomeWork_Collections.Task1;
 
 public class Book
@@ -6,28 +8,16 @@ public class Book
     public string AuthorName { get; set; }
     public int ProdYear { get; set; }
 
-    public void AddBook()
+    public void NewBook()
     {
-        try
-        {
-            Console.Write("Введите название книги: ");
-            string? bookName = Console.ReadLine();
-            BookName = bookName;
-        }
-        catch (WrongBookNameException ex)
-        {
-            if (string.IsNullOrEmpty(BookName) || string.IsNullOrWhiteSpace(BookName))
-            {
-                Console.WriteLine(ex);
-            }   
-        }
+
+        Console.Write("Введите название книги: ");
+        BookName = Console.ReadLine();
         Console.Write("Введите автора книги: ");
-        string? authorName = Console.ReadLine();
-        AuthorName = authorName;
+        AuthorName = Console.ReadLine();
         Console.Write("Введите год издания: ");
-        int prodYear = Convert.ToInt32(Console.ReadLine());
-        ProdYear = prodYear;
-        
-        Console.WriteLine($"Книга '{BookName}' автора '{AuthorName}' '{ProdYear}' года успешно добавлена в библиотеку");
+        ProdYear = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine($"Книга '{BookName}' автора '{AuthorName}' '{ProdYear}' года успешно добавлена в библиотеку!");
     }
+    
 }

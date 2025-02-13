@@ -1,8 +1,8 @@
 namespace HomeWork_Collections.Task1;
 
-public class WrongBookNameException : Exception
+public class WrongYearException : Exception
 {
-    public WrongBookNameException(string message) : base(message)
+    public WrongYearException(string message) : base(message)
     {
         if (string.IsNullOrEmpty(message) || string.IsNullOrWhiteSpace(message))
         {

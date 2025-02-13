@@ -2,12 +2,24 @@ using System.Collections;
 
 namespace HomeWork_Collections.Task1;
 
-public abstract class Library
+public  class Library
 {
-    public void AddTheBookToCollection(Book book)
+    private ArrayList _books;
+    public Library()
     {
-        ArrayList bookCollection = new ArrayList();
-       // bookCollection.Add()
+        _books = new ArrayList();
     }
 
+    public void AddTheBook()
+    {
+        Book book = new Book();
+        Console.WriteLine("Введите название книги:");
+        book.BookName = Console.ReadLine();
+        Console.WriteLine("Введите автора:");
+        book.AuthorName = Console.ReadLine();
+        Console.WriteLine("Введите год издания:");
+        book.ProdYear = Convert.ToInt32(Console.ReadLine());
+
+
+    }
 }

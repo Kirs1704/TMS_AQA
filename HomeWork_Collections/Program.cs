@@ -10,5 +10,6 @@ Console.WriteLine("Homework");
 4.  Удаление книги: Пользователь может выбрать книгу из списка и удалить ее из библиотеки.
 5.  Выход из программы: Пользователь может завершить программу.
 ***/
-Book testbook = new Book();
-testbook.AddBook();
+
+Book book = new Book();
+book.ToString();
