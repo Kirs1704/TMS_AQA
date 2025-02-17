@@ -1,4 +1,6 @@
-﻿using HomeWork_Collections.Task1;
+﻿using HomeWork_Collections.Helper;
+using HomeWork_Collections.Task1;
+using HomeWork_Collections.Task2;
 
 Console.WriteLine("Homework");
 /***
@@ -11,5 +13,20 @@ Console.WriteLine("Homework");
 5.  Выход из программы: Пользователь может завершить программу.
 ***/
 
-Book book = new Book();
-book.ToString();
+/*Library library = new Library();
+library.AddTheBook();
+library.ShowAllBooks();*/
+
+/*** Задание № 2.
+ Напишите программу, используя List<T>, для хранения информации о студентах университета.
+ ***/
+ 
+/*
+Student student = new Student();
+University university = new University();
+university.AddNewStudent();
+university.ShowAllStudents(university.students);
+university.SearchStudent(university.students);*/
+
+ 
+ 
