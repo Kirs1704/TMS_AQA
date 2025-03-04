@@ -4,5 +4,7 @@ namespace HomeWork_Generics.Task2;
 
 public class ArrayContainer<T>
 {
-    //public Array<T>[] Array;
+    private T[] array;
+    
+    
 }

@@ -27,13 +27,13 @@ GP3.Print();
 var GP4 = new GenericPerson<Guid>(Guid.NewGuid(), "Dilan");
 GP4.Print();
 
-var company = new Company<GenericPerson<string>>(GP2);
-var company2 = new Company<GenericPerson<int>>(GP);
-var company3 = new Company<GenericPerson<Guid>>(GP3);
+var company = new Company<GenericPerson<string>>(GP2); // Обобщения могут принимать в качестве типа другое обобщение с разными типами внутри
+var company2 = new Company<GenericPerson<int>>(GP); // например тут мы передаем обобщенному классу Company в кач. аргумента ранее созданный объект обобщенного класса GenericPerson (int)
+var company3 = new Company<GenericPerson<Guid>>(GP3); // а тут GUID
 
 // ==============================================  Static =========================================================
-StaticPerson<int>.code = 123;
-StaticPerson<string>.code = "-- 123 --";
+StaticPerson<int>.code = 123;                  // статические методы/свойства можно вызывать без создания объекта
+StaticPerson<string>.code = "-- 123 --";       // в данном случае свойство является обобщенным <T>, поэтому надо обязательно указать его тип
 
 Console.WriteLine(StaticPerson<int>.code);
 Console.WriteLine(StaticPerson<string>.code);
@@ -44,8 +44,8 @@ var DG = new DoubleGeneric<Guid, int>(Guid.NewGuid(), 234, "TestName");
 
 // ================================= Обобщенные методы ================================================================
 int x = 10;
-int y = 10;
-Helper.Swap<int>(ref x, ref y);
+int y = 12;
+Helper.Swap<int>(ref x, ref y); // в обобщенных методах указание типа (например как тут <int>) не обязательно. см. следующий пример
 
 string x2 = "Hello";
 string y2 = "World";
@@ -56,9 +56,9 @@ Helper.Swap(ref x2, ref y2);
 
 // ----------------------------------- Ограничения методов -------------------------------------------------
 Helper.SendMessage(new Message("Hello, World!"));
-Helper.SendMessage(new EmailMessage("Hello from Email"));
-Helper.SendMessage(new SmsMessage("Hello from SMS"));
-Helper.SendMessage<SmsMessage>(new SmsMessage("This is sms message"));
+Helper.SendMessage(new EmailMessage("Hello from Email")); // класс-наследник от Message
+Helper.SendMessage(new SmsMessage("Hello from SMS"));     // класс-наследник от Message
+Helper.SendMessage<SmsMessage>(new SmsMessage("This is sms message")); // так как в методе SendMessage есть ограничение Message, то все наследники Message также можно передавать методу как аргументы
 
 
 // --------------------------------- Ограничение обобщений в типах -----------------------------------------
@@ -71,3 +71,10 @@ var msg2 = new Messenger<EmailMessage>();
 msg2.SendMessage(new EmailMessage("Сообщение из почты"));
 
 var ms = new MessengerStruct<MessageStruct>();
+
+// --------------------------------- Ограничение нескольких параметров  -----------------------------------------
+// см. класс MessengerService
+SimplePerson sender = new SimplePerson(1, "Fredd");
+SimplePerson receiver = new SimplePerson(2, "Todd");
+MessengerService<EmailMessage, SimplePerson> messengerService = new MessengerService<EmailMessage, SimplePerson>();
+messengerService.SendMessage(sender, receiver, new EmailMessage("Hello!"));

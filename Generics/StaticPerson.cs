@@ -2,7 +2,7 @@ namespace Generics;
 
 public class StaticPerson<T>
 {
-    public static T? code;
+    public static T? code;      // знак вопроса тут нужен, чтобы обработать ситуацию, когда code == null
     public T Id { get; set; }
     public string Name { get; set; }
 

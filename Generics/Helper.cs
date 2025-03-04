@@ -11,7 +11,7 @@ public static class Helper
     }
 
 
-    public static void SendMessage(Message message) // обычный метод
+    public static void SendMessage(Message message) // обычный метод (для класса message)
     {
         Console.WriteLine($"Отправляемое сообщение: {message.Text}");
     }
