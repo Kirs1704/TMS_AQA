@@ -26,16 +26,25 @@ public class ArrayContainer<T> // создали обобщенный класс
         {
             try
             {
-                
+
                 if (i == index)
                 {
+                    if (index > array.Length)
+                    {
+                        throw new Exception();
+                    }
+
                     continue;
                 }
             }
-            else
+            catch
             {
-                Array.Copy(array, newArray, array.Length);
+                Console.WriteLine;
             }
+                else
+                {
+                 Array.Copy(array, newArray, array.Length);
+                }
         }
 
         array = newArray;
