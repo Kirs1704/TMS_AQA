@@ -24,9 +24,13 @@ public class ArrayContainer<T> // создали обобщенный класс
         T[] newArray = new T[array.Length - 1];
         for (int i = 0; i < array.Length; i++)
         {
-            if (i == index)
+            try
             {
-                continue;
+                
+                if (i == index)
+                {
+                    continue;
+                }
             }
             else
             {
